@@ -1,0 +1,18 @@
+{
+  "name": "sbis3-fiddler-2nd-hope",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "author": "kochnevns",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "http-mitm-proxy": "^0.5.1",
+    "yaxy": "^0.2.0"
+  }
+}
