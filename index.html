@@ -8,20 +8,24 @@
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   </head>
   <body>
-  <div style="width:90%;height: 90%;margin: 24px auto;box-shadow:         5px 3px 24px 0px rgba(50, 50, 50, 0.31);">
+  <div class="overlay"></div>
+  <div style="width:90%;height: 90%;margin: 24px auto; border: 1px solid rgba(50, 50, 50, 0.15);">
 <style>
-
+body {
+  position: absolute;
+}
 .mdl-list__item {
-  font-size: 0.8rem;
+
   transition: all 0.2s ease-in-out;
   border-bottom: 1px solid #eee;
+  padding: 22px !important;
 }
 .mdl-list__item-avatar, .mdl-list__item-avatar.material-icons {
     height: 22px;
-    width: 44px;
+    width: 22px;
     /* box-sizing: border-box; */
     border-radius: 12px;
-    background-color: #0cb1c1;
+    background-color: rgb(159, 168, 218);
     font-size: 23px;
     color: #fff;
     display: block;
@@ -36,49 +40,72 @@
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
+    color:#434343;
+    font-weight: 200;
+      font-size: 0.99rem;
 }
 .demo-list-radio {
   display: inline;
 }
+.demo-card-square {
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  height: 300px;
+  top: 20%;
+  position: absolute;
+  z-index: 1002;
+  display: none;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(19, 9, 21, 0.32);
+  display: none;
+
+}
+.btnWrapper .mdl-button {
+  float: right;
+  position: fixed;
+  bottom: 40px;
+  right: 5%;
+}
+.mdl-list {
+  margin: 0;
+  padding:0;
+}
 </style>
 
-<ul class="demo-list-control mdl-list" style="font-size: 0.6rem !important;">
-  <li class="mdl-list__item">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">dns</i>
-      http://test-cloud.sbis.ru/debug/resources/Upravlenie_oblakom/Components/RazdelStrukturaOblaka/Prilojeniya/EditDialogs/Redaktirovanie_prilojeniya/PrivateAppEdit/PrivateAppEdit.module.js
-    </span>
-      <span class="mdl-list__item-secondary-action">
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="list-switch-1">
-          <input type="checkbox" id="list-switch-1" class="mdl-switch__input" checked />
-        </label>
-    </span>
-  </li>
-  <li class="mdl-list__item">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">dns</i>
-      http://test-cloud.sbis.ru/debug/resources/Upravlenie_oblakom/Components/RazdelStrukturaOblaka/Prilojeniya/EditDialogs/Redaktirovanie_prilojeniya/PrivateAppEdit/PrivateAppEdit.module.js
-    </span>
-      <span class="mdl-list__item-secondary-action">
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="list-switch-1">
-          <input type="checkbox" id="list-switch-1" class="mdl-switch__input" checked />
-        </label>
-    </span>
-  </li>
-  <li class="mdl-list__item">
-    <span class="mdl-list__item-primary-content">
-      <i class="material-icons  mdl-list__item-avatar">dns</i>
-      http://test-cloud.sbis.ru/debug/resources/Upravlenie_oblakom/Components/RazdelStrukturaOblaka/Prilojeniya/EditDialogs/Redaktirovanie_prilojeniya/PrivateAppEdit/PrivateAppEdit.module.js
-    </span>
-      <span class="mdl-list__item-secondary-action">
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="list-switch-1">
-          <input type="checkbox" id="list-switch-1" class="mdl-switch__input" checked />
-        </label>
-    </span>
-  </li>
+
+<ul class="demo-list-control mdl-list" style="font-size: 0.8rem !important;">
 </ul>
 
 </div>
+
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h2 class="mdl-card__title-text">Add Rule</h2>
+  </div>
+   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:90%;margin: 14px">
+    <input class="mdl-textfield__input" type="text" id="from">
+    <label class="mdl-textfield__label" for="sample3">URL</label>
+  </div>  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:90%;margin: 14px;">
+    <input class="mdl-textfield__input" type="text" id="to">
+    <label class="mdl-textfield__label" for="sample3">replace with</label>
+  </div>
+
+    <a class="addrule mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-right: 10px;width:auto;float:right">
+     add
+    </a>
+</div>
+<div class="btnWrapper">
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+  <i class="material-icons">add</i>
+</button>
+</div>
+
   </body>
 
   <script>

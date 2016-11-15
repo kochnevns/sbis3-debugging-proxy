@@ -1,14 +1,23 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
+const spawn = require('child_process').spawn;
 
-class YaxyManager {
+module.exports = class YaxyManager {
 
     constructor(configFileName) {
 
         this._DIVIDER = ' => ';
         this._YAXY_CONFIG_PATH = path.resolve(__dirname, 'yaxy-config.txt');
         this.readConfig();
+        this.start();
+    }
+    start() {
+        this.yaxyProcess = spawn('node', ['/usr/local/Cellar/node/5.0.0/libexec/npm/lib/node_modules/yaxy/index.js']);
+    }
+    restart() {
+        this.yaxyProcess.kill();
+        this.start();
     }
     readConfig() {
         let buff = fs.readFileSync(this._YAXY_CONFIG_PATH);
@@ -49,8 +58,3 @@ class YaxyManager {
 
     }
 }
-
-const yaxy = new YaxyManager()
-console.log(yaxy.config)
-yaxy.appendIntoConfig('kek', 'lol');
-yaxy.commitConfig();
