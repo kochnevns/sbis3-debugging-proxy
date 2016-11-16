@@ -1,3 +1,3 @@
 http://test-cloud.sbis.ru/debug/resources/Upravlenie_oblakom/Components/RazdelStrukturaOblaka/Prilojeniya/EditDialogs/Redaktirovanie_prilojeniya/PrivateAppEdit/PrivateAppEdit.module.js => file:///home/local/TENSOR-CORP/ns.kochnev/reps/sbis3-fiddler-2nd-hope/main.js
 http://test-cloud.sbis.ru/debug/ws/core/tmpl/js/helpers/entityHelpers.js => file:///home/local/TENSOR-CORP/ns.kochnev/reps/sbis3-fiddler-2nd-hope/main.js
-kek => lol
+http://pre-test-cloud.sbis.ru/debug/resources/SBIS3.ENGINE/components/AdminBasicAccordion/img/cloud-icon-png-clouds.png => file:///home/local/TENSOR-CORP/ns.kochnev/Загрузки/174129-gs-316-numix-theme/screenshots/system-menu.png

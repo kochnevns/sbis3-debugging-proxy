@@ -2,13 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- normal script imports etc  -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>    
+
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
     <title>SBIS3.Fiddler</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script type="text/javascript">
+      const Backbone = require('backbone')
+    </script>
   </head>
   <body>
-  <div class="overlay"></div>
+
   <div style="width:90%;height: 90%;margin: 24px auto; border: 1px solid rgba(50, 50, 50, 0.15);">
 <style>
 body {
@@ -19,6 +30,9 @@ body {
   transition: all 0.2s ease-in-out;
   border-bottom: 1px solid #eee;
   padding: 22px !important;
+}
+.mdl-list__item:hover {
+  cursor: pointer;
 }
 .mdl-list__item-avatar, .mdl-list__item-avatar.material-icons {
     height: 22px;
@@ -55,7 +69,7 @@ body {
   top: 20%;
   position: absolute;
   z-index: 1002;
-  display: none;
+
 }
 .overlay {
   position: absolute;
@@ -63,7 +77,7 @@ body {
   height: 100%;
   z-index: 1000;
   background: rgba(19, 9, 21, 0.32);
-  display: none;
+
 
 }
 .btnWrapper .mdl-button {
@@ -84,22 +98,7 @@ body {
 
 </div>
 
-<div class="demo-card-square mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand">
-    <h2 class="mdl-card__title-text">Add Rule</h2>
-  </div>
-   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:90%;margin: 14px">
-    <input class="mdl-textfield__input" type="text" id="from">
-    <label class="mdl-textfield__label" for="sample3">URL</label>
-  </div>  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:90%;margin: 14px;">
-    <input class="mdl-textfield__input" type="text" id="to">
-    <label class="mdl-textfield__label" for="sample3">replace with</label>
-  </div>
 
-    <a class="addrule mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-right: 10px;width:auto;float:right">
-     add
-    </a>
-</div>
 <div class="btnWrapper">
   <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
   <i class="material-icons">add</i>
@@ -110,6 +109,6 @@ body {
 
   <script>
     // You can also require other files to run in this process
-    require('./renderer.js')
+    require('./lib/renderer.js')
   </script>
 </html>
