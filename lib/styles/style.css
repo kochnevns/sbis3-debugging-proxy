@@ -1,14 +1,18 @@
 body {
   position: absolute;
+      background: #434352;
 }
 header {
   position: fixed;
-}
+  display: block !important;
+ background: #73738c !important;}
 .mdl-list__item {
 
   transition: all 0.2s ease-in-out;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #4d4d5d;
   padding: 12px !important;
+  color: #ccc !important;
+  height: 64px;
 }
 .mdl-list__item:hover {
   cursor: pointer;
@@ -26,14 +30,15 @@ header {
 .mdl-list__item-secondary-action {
   margin-left: 16px;
 }
-.mdl-list__item:hover {
-  background: #eee;
+.mdl-list__item:hover 
+{
+  background: #73738c;
 }
 .mdl-list__item span.mdl-list__item-primary-content{
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    color:#434343;
+    color:#ccc;
     font-weight: 200;
       font-size: 0.99rem;
       height: 24px;
@@ -84,7 +89,7 @@ header {
     color: aliceblue !important;
 }
 .mdl-list {
-  padding-top: 60px !important;
+  padding-top: 66px !important;
   margin: 0;
   padding:0;
 }
