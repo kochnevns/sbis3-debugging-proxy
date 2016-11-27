@@ -6,7 +6,7 @@ div(class="demo-card-square mdl-card mdl-shadow--2dp")
     input(class="mdl-textfield__input" type="text" value="#{from}" id="from")
   div(style="position:absolute;top:160px;left: 12px; color:#ccc;") Replace with
   div(class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:90%;margin: 14px;")
-    input(class="mdl-textfield__input" type="text" value="#{to}" id="to")
+    input(class="mdl-textfield__input" type="text" value="#{to || ''}" id="to")
 
                   
 

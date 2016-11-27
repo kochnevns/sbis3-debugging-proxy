@@ -1,11 +1,15 @@
 body {
   position: absolute;
       background: #434352;
+
 }
 header {
   position: fixed;
   display: block !important;
- background: #73738c !important;}
+ background: rgb(48, 48, 56) !important;
+      margin-top: -55px !important;
+box-shadow:         -1px 11px 16px 0px rgba(50, 50, 50, 0.32) !important;
+}
 .mdl-list__item {
 
   transition: all 0.2s ease-in-out;
@@ -92,4 +96,13 @@ header {
   padding-top: 66px !important;
   margin: 0;
   padding:0;
+   margin: 5% !important;
+}
+.mdl-layout__header-row {
+
+    padding: 0 16px 0 8px !important;
+}
+.mdl-layout-title {
+      font-weight: 100;
+    font-family: Noto Sans, Arial;
 }
