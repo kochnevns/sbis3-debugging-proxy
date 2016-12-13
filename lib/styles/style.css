@@ -3,8 +3,9 @@ body {
       background: #434352;
 
 }
+
 .mdl-layout-title {
-      margin-left: 72px;
+    margin-left: 5%;
 }
 div.mdl-layout__header {
     position: fixed;
@@ -45,9 +46,9 @@ div.mdl-layout__header {
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    color:#ccc;
+    color:#fff;
     font-weight: 400;
-      font-size: 1.09rem;
+    font-size: .9rem;
 
 }
 .demo-list-radio {
@@ -119,7 +120,7 @@ div.mdl-layout__header {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
-  position: relative;
+  position: relative;      transform: scale(.7, .7);
 
   -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
@@ -136,6 +137,7 @@ div.mdl-layout__header {
 
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
+
   border-radius: 50px;
   background: #656575;
 }
